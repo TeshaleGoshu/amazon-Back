@@ -2,7 +2,7 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-const Stripe  = require("@stripe/react-stripe-js");
+import Stripe from "stripe";
 
 
 
