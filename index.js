@@ -1,4 +1,4 @@
-import Stripe from "stripe";
+import Stripe from '@stripe/react-stripe-js';
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
