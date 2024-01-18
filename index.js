@@ -1,10 +1,7 @@
-
+import Stripe from "stripe";
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-import Stripe from "stripe";
-
-
 
 Stripe.api_key =
 	"sk_test_51ORziWLY7QzH3oZ7JFniKwVSVgldt0855dZmv9TW4Z2p1Wk6U11MTNiSi5sGhVaisFaxFPd7TmxQR36ULIbLlY2d00rahr93h2";
