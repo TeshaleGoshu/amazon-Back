@@ -1,4 +1,4 @@
-
+import stripe from '@stripe/stripe-js'
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
