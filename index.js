@@ -2,12 +2,14 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
+const Stripe  = require("@stripe/react-stripe-js");
 
 
-stripe.api_key =
+
+Stripe.api_key =
 	"sk_test_51ORziWLY7QzH3oZ7JFniKwVSVgldt0855dZmv9TW4Z2p1Wk6U11MTNiSi5sGhVaisFaxFPd7TmxQR36ULIbLlY2d00rahr93h2";
 
-const PaymentIntentVar = stripe.PaymentIntent.create(
+const PaymentIntentVar = Stripe.PaymentIntent?.create(
 	(amount = 2000),
 	(currency = "GBP"),
 	(payment_method_types = ["card"])
@@ -24,7 +26,7 @@ app.get("/", (request, response) => response.status(200).send("hello world"));
 app.post("/payments/create", async (request, response) => {
 	const total = request.query.total;
 	console.log("Payment request received!>>>", total);
-	const paymentIntent = await stripe.paymentIntents?.create({
+	const paymentIntent = await Stripe.paymentIntents?.create({
 		amount: total,
 		currency: "GBP",
 	});
